@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Five</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body id="five-body">
+    <header>
+      <h1>Practice Site: Page Five</h1>
+    </header>
+    <div id="wrapper">
+      <aside id="mySidenav">
+        <nav>
+          <ul>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="one.html"> Page One </a></li>
+            <li><a href="two.html"> Page Two </a></li>
+            <li><a href="three.html"> Page Three </a></li>
+            <li><a href="four.html"> Page Four </a></li>
+            <li><a href="five.html"> Page Five </a></li>
+          </ul>
+        </nav>
+      </aside>
+      <span style="font-size: 25px; cursor: pointer" onclick="openNav()"
+        >&#9776; Open SideBar</span
+      >
+      <section>
+        <header>
+          <figure>
+            <img src="img/banner3.png" />
+          </figure>
+          <h2>This is a Photo Gallery</h2>
+        </header>
+        <section id="gallery">
+          <figure>
+            <a href="#"><img src="img/1.jpg" /></a>
+            <div class="overlay">
+              <figcaption>One</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/2.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Two</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/3.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Three</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/4.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Four</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/5.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Five</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/6.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Six</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/7.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Seven</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/8.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Eight</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/9.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Nine</figcaption>
+            </div>
+          </figure>
+          <figure>
+            <a href="#"><img src="img/10.jpg" /></a>
+            <div class="overlay">
+              <figcaption>Ten</figcaption>
+            </div>
+          </figure>
+        </section>
+      </section>
+    </div>
+    <footer>
+      <ul>
+        <li>&copy; Aenean Vulputate</li>
+        <li><b>Email</b>: aenean@vulputate.com</li>
+        <li><b>Phone</b>: +1 (123) 456-7890</li>
+        <li><b>Address</b>: Earth</li>
+      </ul>
+    </footer>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
+</html>

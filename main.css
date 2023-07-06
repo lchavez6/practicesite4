@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  width: 100%;
+  z-index: 50;
+}
+body {
+  font-family: sans-serif;
+}
+
+body > header:first-of-type {
+  position: fixed;
+  background-color: #f0f0f0;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  /* pattern */
+  background-image: linear-gradient(
+    to bottom,
+    #7f005d,
+    #961b78,
+    #ad3094,
+    #c345b2,
+    #d859d2,
+    #e554d1,
+    #f24fcf,
+    #ff48cc,
+    #ff14a2,
+    #ff0073,
+    #ff0043,
+    #ff0000
+  );
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background-color: #f0f0f0;
+  /* pattern */
+  background-image: linear-gradient(
+    to bottom,
+    #7f005d,
+    #961b78,
+    #ad3094,
+    #c345b2,
+    #d859d2,
+    #e554d1,
+    #f24fcf,
+    #ff48cc,
+    #ff14a2,
+    #ff0073,
+    #ff0043,
+    #ff0000
+  );
+}
+
+#wrapper {
+  margin-top: 90px;
+  margin-bottom: 120px;
+}
+
+img {
+  width: 100%;
+  min-width: 250px;
+}
+
+header {
+  overflow: auto;
+  zoom: 1;
+}
+
+#two-body img,
+#three-body img {
+  width: 50%;
+  min-width: 200px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* one.html */
+
+#aside-nav {
+  height: 100vh;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+#one-wrapper {
+  position: relative;
+}
+.one-article {
+  margin-left: 200px;
+}
+#one-first-article {
+  margin-top: 100px;
+}
+#one-second-article {
+  margin-bottom: 120px;
+}
+
+/* two.html */
+
+#two-body #wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#two-body aside {
+  float: left;
+  width: 200px;
+}
+
+#two-body img {
+  min-width: 270px;
+}
+
+#two-body article {
+  margin-left: 200px;
+}
+
+#two-body footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* three.html */
+
+#three-body #wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#three-body aside {
+  float: left;
+  width: 25%;
+  margin-right: 20px;
+  background: white;
+}
+
+#three-body article {
+  margin-left: 25%;
+  background: rgb(212, 212, 212);
+  padding: 30px;
+}
+
+#three-body img {
+  min-width: 270px;
+}
+
+#three-body footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* four.html */
+
+#four-body {
+  padding: 0;
+  margin: 0;
+}
+
+#four-body aside {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+
+#four-body #section {
+  display: inline-block;
+  vertical-align: top;
+  width: 74%;
+  background: #cfcfcf;
+  padding: 20px;
+}
+
+/* five.html */
+
+#five-body {
+  padding: 0 20px;
+}
+
+#five-body header img {
+  width: 30%;
+  min-width: 0;
+  float: right;
+}
+
+#five-body aside {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffdddd;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top: 70px;
+}
+
+#five-body ul {
+  list-style: none;
+  text-decoration: none;
+}
+#five-body aside li a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#five-body a:hover {
+  color: #444444;
+}
+
+#five-body aside .closebtn {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: #818181;
+}
+
+@media screen and (max-height: 450px) {
+  #five-body aside {
+    padding-top: 15px;
+  }
+  #five-body aside a {
+    font-size: 18px;
+  }
+}
+
+#gallery figure {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 1em;
+  position: relative;
+  box-shadow: #484848 0px 0px 15px 1px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008a65;
+}
+
+#gallery figure:hover .overlay {
+  opacity: 0.75;
+}
+
+#gallery figcaption {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#gallery figure img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#five-body header {
+  overflow: auto;
+  zoom: 1;
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 750px) {
+  #three-body article {
+    float: none;
+    width: auto;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
+  #three-body aside {
+    float: none;
+    width: auto;
+  }
+}
